@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="itemClickListener"
+            type="com.ezdream.template.ui.pageA.ItemClickListener" />
+
+        <variable
             name="viewModel"
             type="com.ezdream.template.ui.pageA.AFragmentVM" />
 
@@ -15,6 +19,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.pageA.AFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_a_recycler_view"
+            app:setOnItemClickListener="@{itemClickListener}"
+            app:list="@{viewModel.exampleList}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/test_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/test_text"

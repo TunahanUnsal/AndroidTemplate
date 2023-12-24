@@ -14,8 +14,12 @@ hilt = "2.48"
 coroutines = "1.7.1"
 navigation = "2.7.6"
 lifecycle = "2.6.2"
+android-gif-drawable = "1.2.17"
+okhttp = "2.7.2"
+retrofit = "2.3.0"
 
 [libraries]
+android-gif-drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "android-gif-drawable" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
@@ -37,6 +41,9 @@ livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", vers
 lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 savedsatateViewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
 lifecycleCompiler = { group = "androidx.lifecycle", name = "lifecycle-compiler", version.ref = "lifecycle" }
+okhttp = { module = "com.squareup.okhttp:okhttp", version.ref = "okhttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }

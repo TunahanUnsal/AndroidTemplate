@@ -80,6 +80,10 @@ dependencies {
     implementation(libs.navigationUi)
     implementation(libs.viewmodel)
     implementation(libs.livedata)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.android.gif.drawable)
+    implementation (libs.okhttp)
     implementation(libs.lifecycle)
     implementation(libs.savedsatateViewmodel)
 

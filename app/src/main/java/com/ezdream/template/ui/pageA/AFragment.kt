@@ -1,6 +1,7 @@
 package com.ezdream.template.ui.pageA
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.ezdream.template.databinding.FragmentABinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AFragment : Fragment() {
+class AFragment : Fragment(), ItemClickListener {
 
     private var _binding: FragmentABinding? = null
     private val binding get() = _binding!!
@@ -28,9 +29,15 @@ class AFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        viewModel.addData()
+        viewModel.addData()
+        viewModel.addData()
+
         binding.fragmentAFab.setOnClickListener {
             findNavController().navigate(R.id.action_AFragment_to_BFragment)
         }
+
+        binding.itemClickListener = this
 
         return binding.root
     }
@@ -38,6 +45,10 @@ class AFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onClick(id: Int) {
+        Log.i("TAG", "onClick")
     }
 
 }
